@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Street Rush</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <h1>🏎️ Street Rush</h1>
+      <div class="stats">
+        <span>Velocidade: <b id="speed">0</b> km/h</span>
+        <span>Pontos: <b id="score">0</b></span>
+        <span>Recorde: <b id="best">0</b></span>
+      </div>
+    </header>
+
+    <section class="game-area">
+      <canvas id="game" width="500" height="700"></canvas>
+
+      <div id="startScreen" class="overlay">
+        <h2>STREET RUSH</h2>
+        <p>Desvie dos carros e faça a maior pontuação!</p>
+        <p class="controls">⬅️ ➡️ ou A / D para dirigir<br>⬆️ / W acelera · ⬇️ / S freia</p>
+        <button id="startBtn">COMEÇAR</button>
+      </div>
+
+      <div id="gameOver" class="overlay hidden">
+        <h2>💥 BATIDA!</h2>
+        <p>Pontuação: <b id="finalScore">0</b></p>
+        <button id="restartBtn">JOGAR NOVAMENTE</button>
+      </div>
+    </section>
+
+    <p class="tip">Dica: quanto mais tempo você sobrevive, mais rápido o trânsito fica.</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
